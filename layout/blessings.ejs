@@ -1,0 +1,31 @@
+<div id="Pjax">
+  <div id="respond-page-2" class="respond list-content mx-auto mt-5">
+    <div class="list-top">
+      <h5 class="text-center">累计已经收到<span id="bigfontNum" class="bigfontNum"> 0 </span>条祝福</h5>
+
+      <div id="waline">
+
+      </div>
+      <script>
+
+          Waline.init({
+              el: '#waline',
+              serverURL: 'https://waline-steel-psi.vercel.app/',
+              locale: {
+                placeholder: '写下对我们的祝福'
+              }
+  
+          });
+
+          setInterval(()=>{
+            var numTag = document.querySelector('.wl-num')
+            if(numTag){
+
+              document.querySelector('#bigfontNum').innerText = numTag.innerText
+            }
+
+          },1000);
+      </script>
+    </div>
+  </div>
+</div>

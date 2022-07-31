@@ -1,0 +1,26 @@
+<div id="Pjax">
+  <div class="list-content mx-auto mt-5">
+      <div class="list-top">
+          <h5 class="list-text">📜相信在以后会有更多美好的事情发生😊</h5>
+
+          <% site.posts.each(function(post){ %>
+
+              <div>
+                <article :key="i" style="padding: 20px;border-bottom: 1px solid rgba(0,123,255,.2);text-align: center;"
+                    class="post" itemscope itemtype="http://schema.org/BlogPosting">
+                    <h4 class="post-title" itemprop="name headline">
+                    
+                        <a class="list-wbc" href="<%- url_for(post.path) %>">  <%= post.title %>
+                        </a>
+                    </h4>
+                    <time datetime="" itemprop="datePublished"> 深情地写于 <%= date(post.date) %></time>
+                </article>
+            </div>
+  
+          <% }) %>
+
+      </div>
+  </div>
+</div>
+
+

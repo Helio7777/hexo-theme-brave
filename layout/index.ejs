@@ -1,0 +1,101 @@
+<div id="Pjax">
+  <div class="container">
+      <blockquote class="blockquote text-center my-5 py-2">
+          <h5 class="card-title lover-card-title">我们风雨同舟已经一起走过</h5>
+          <h5 id="site_runtime">
+              
+          </h5>
+      </blockquote>
+      <div class="row indexPlate">
+          <div class="col-md-4">
+              <a href="/blessings/" class="card">
+                  <div class="card-body">
+                      <div class="row align-items-center">
+                          <div class="col-auto">
+                              <div class="avatar avatar-md">
+                                  <img src="/img/blessings.jpg" alt="..."
+                                      class="avatar-img rounded-circle">
+                              </div>
+                          </div>
+                          <div class="col">
+                              <p class="h5">祝福板</p>
+                              <p class="small text-muted mb-1">💌写下对我们的祝福</p>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+          </div>
+          <div class="col-md-4">
+              <a href="/records/" class="card">
+                  <div class="card-body">
+                      <div class="row align-items-center">
+                          <div class="col-auto">
+                              <div class="avatar avatar-md">
+                                  <img src="/img/records.jpg" alt="..."
+                                      class="avatar-img rounded-circle">
+                              </div>
+                          </div>
+                          <div class="col">
+                              <p class="h5">点点滴滴</p>
+                              <p class="small text-muted mb-1">💖记录你我生活</p>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4">
+            <a href="/lovelist/" class="card">
+                  <div class="card-body">
+                      <div class="row align-items-center">
+                          <div class="col-auto">
+                              <div class="avatar avatar-md">
+                                  <img src="/img/lovelist.jpg" alt="..."
+                                      class="avatar-img rounded-circle">
+                              </div>
+                          </div>
+                          <div class="col">
+                              <p class="h5">Love List</p>
+                              <p class="small text-muted mb-1">📜甜蜜瞬间有你陪伴</p>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+          </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+      <script>
+          window.showSiteRuntime = function () {
+              site_runtime = $("#site_runtime");
+              if (!site_runtime) {
+                  return;
+              }
+              window.setTimeout("showSiteRuntime()", 1000);
+              start = new Date("<%= theme.lovebegin %>");
+              now = new Date();
+              T = (now.getTime() - start.getTime());
+              i = 24 * 60 * 60 * 1000;
+              d = T / i;
+              D = Math.floor(d);
+              h = (d - D) * 24;
+              H = Math.floor(h);
+              m = (h - H) * 60;
+              M = Math.floor(m);
+              s = (m - M) * 60
+              S = Math.floor(s);
+              site_runtime.html("<span class=\"bigfontNum\">" + D + "</span> 天 <span class=\"bigfontNum\">" + H + "</span> 小时 <span class=\"bigfontNum\">" + M + "</span> 分钟 <span class=\"bigfontNum\">" + S + "</span> 秒");
+          };
+          showSiteRuntime();
+          $(document).pjax('a', '#Pjax', {
+              fragment: '#Pjax',
+              timeout: 6000
+          });
+          $(document).on('pjax:send', function () {
+              NProgress.start();
+          });
+          $(document).on('pjax:complete', function () {
+              NProgress.done();
+          });
+      </script>
+  </div>
