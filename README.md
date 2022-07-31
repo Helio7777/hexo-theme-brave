@@ -6,11 +6,7 @@
 
 ## 主题安装
 
-```bash
-npm i hexo-theme-brave
-```
 
-修改站点配置文件
 
 
 
