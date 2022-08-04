@@ -4,13 +4,15 @@
 
 该主题最初版是 typeecho 主题[Brave](https://github.com/zwying0814/Brave)移植过来的，感谢原作者 🙏。
 
-## ![](doc/1.png)
+![](doc/1.png)
 
-## ![](doc/2.png)
+![](doc/2.png)
 
-## ![](doc/3.png)
+![](doc/3.png)
 
-## ![](doc/4.png)
+![](doc/4.png)
+
+演示地址 https://l.beimengyeyu.com/
 
 ## 主题安装
 
