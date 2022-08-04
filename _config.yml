@@ -22,7 +22,7 @@ waline: https://waline-steel-psi.vercel.app/
 lovelist:
   - desc: 一起看日出🌅
     status: 1
-    img: /img/banner.jpg
+    img: /img/sunrise.jpg
   - desc: 一起看日落🌄
     status: 0
     img:

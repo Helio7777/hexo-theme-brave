@@ -1,10 +1,13 @@
 {
   "name": "hexo-theme-brave",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "情侣风格的Hexo主题",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "beimengyeyu",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "hexo",
+    "hexo-theme"
+  ]
 }
