@@ -12,7 +12,7 @@
 
 ![](doc/4.png)
 
-演示地址 https://l.beimengyeyu.com/
+演示地址 https://hexo-brave-example.furacas.com
 
 ## 主题安装
 
