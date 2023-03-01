@@ -2,6 +2,22 @@
     <link href="/styles/main.css" rel="stylesheet" type="text/css"/>
 
     <meta charset="UTF-8">
+    <%
+      var title = page.title;
+      if (is_archive()){
+          title = __('archive_a');
+      if (is_month()){
+          title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()){
+          title += ': ' + page.year;
+      }
+      } else if (is_category()){
+      title = __('category') + ': ' + page.category;
+      } else if (is_tag()){
+      title = __('tag') + ': ' + page.tag;
+    }
+    %>
+    <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
