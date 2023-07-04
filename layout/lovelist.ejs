@@ -30,9 +30,7 @@
             <% if (!!item.img) { %>
                 <div id="collapse<%= index %>" class="collapse" aria-labelledby="heading<%= index %>" data-parent="#loveList">
                     <div class="card-body p-0">
-                        <section
-                            style="background-image: url(<%= item.img %>)">
-                        </section>
+                        <img src="<%= item.img %>" alt="Description" style="width:100%; height:auto;">
                     </div>
                 </div>
             <% } %>

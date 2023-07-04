@@ -199,15 +199,7 @@ height: 65px;
 max-width: 650px;
 width: 100%;
 }
-#loveList section{
-display: block;
-padding-top: 50%;
-background-position: 50% 50%;
-background-color: #eee;
-background-repeat: no-repeat;
--webkit-background-size: cover;
-background-size: cover;
-}
+
 
 .statusIcon{
 width: 18px;
