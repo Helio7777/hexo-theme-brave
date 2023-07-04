@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-brave",
-  "version": "1.4.0",
+  "version": "1.0.0",
   "description": "情侣风格的Hexo主题",
   "main": "index.js",
   "scripts": {},
