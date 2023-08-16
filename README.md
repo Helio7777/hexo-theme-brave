@@ -42,7 +42,7 @@ theme: brave
 
 | 配置项          | 说明                   | 默认值                       |
 | --------------- | ---------------------- | ---------------------------- |
-| lovebegin       | 恋爱开始时间           | 2017-07-27   ｜              |
+| lovebegin       | 恋爱开始时间           | 2017-07-27                  |
 | banner          | 页面大图的图片地址     | /img/banner.jpg              |
 | leftname        | 左侧情侣头像的名称     | boyname                      |
 | leftavatar      | 左侧情侣头像的图片地址 | /img/boyavatar.jpg           |
